@@ -4,27 +4,29 @@
 #include <iostream>
 #include <stdlib.h>
 #include <math.h>
-#include "Step4config.h"
+#include "Step5config.h"
 #ifdef USE_MYMATH
 #include "MathFunctions.h"
 #endif
 
 int main(int argc, char* argv[])
 {
-	fprintf(stdout, " Version %d.%d\n",
+		fprintf(stdout, " Version %d.%d\n",
 			Tutorial_VERSION_MAJOR,
 			Tutorial_VERSION_MINOR);
-	fprintf(stdout, "Usage: %s number\n", argv[0]);
+		fprintf(stdout, "Usage: %s number\n", argv[0]);
 
-	double  inputValue = atof(argv[0]);
+	double inputValue;
+
+	std::cin >> inputValue;
 
 	// if we have both log and exp then use them
-
 	double outputValue;
+
  #ifdef USE_MYMATH
-	 outputValue = mysqrt(inputValue);
+	outputValue = mysqrt(inputValue);
  #else
-	 outputValue = sqrt(inputValue);
+	outputValue = sqrt(inputValue);
  #endif
 
 	fprintf(stdout, "The square root of %g is %g\n",

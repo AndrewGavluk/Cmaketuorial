@@ -17,9 +17,7 @@ int main(int argc, char* argv[])
 			Tutorial_VERSION_MINOR);
 		fprintf(stdout, "Usage: %s number\n", argv[0]);
 
-	double inputValue;
-
-	std::cin >> inputValue;
+	int inputValue = atoi (argv[0]);
 
 #ifdef USE_MYMATH
 	double outputValue = mysqrt(inputValue);
@@ -27,7 +25,7 @@ int main(int argc, char* argv[])
 	double outputValue = sqrt(inputValue);
 #endif
 
-	fprintf(stdout, "The square root of %g is %g\n",
+	fprintf(stdout, "The square root of %i is %g\n",
 		inputValue, outputValue);
 	return 0;
 }

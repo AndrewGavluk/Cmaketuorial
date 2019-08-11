@@ -7,7 +7,7 @@ project ("Step3")
 
 # The version number.
 set (Tutorial_VERSION_MAJOR 1)
-set (Tutorial_VERSION_MINOR 1)
+set (Tutorial_VERSION_MINOR 2)
  
 # should we use our own math functions
 option(USE_MYMATH 
